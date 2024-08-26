@@ -13,19 +13,19 @@ int main () {
     Point ** points = new Point*[3];
     double x, y;
 
-    for (int i = 0; i < sizeof(points)/sizeof(points[0]); i++) {
+    for (int i = 0; i < 3; i++) {
         
         cout << "Enter x and y coordinates for point " << i + 1 << ": ";
         cin >> x >> y;
         points[i] = new Point(x, y);
     }
 
-    for (int i = 0; i < sizeof(points)/sizeof(points[0]); i++) {
+    for (int i = 0; i < 3; i++) {
         cout << "Point " << i + 1 << ": " << *points[i] << endl;
     }
 
     /* Delete each point */
-    for (int i = 0; i < sizeof(points)/sizeof(points[0]); i++) {
+    for (int i = 0; i < 3; i++) {
         delete points[i];
     }
 
